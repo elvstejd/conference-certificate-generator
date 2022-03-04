@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Button, Input, Text } from '@nextui-org/react';
 import seal from './seal.png';
 import Atropos from 'atropos/react';
+import toast from 'react-hot-toast';
 
 const MainPageContainer = styled.div`
   max-width: 40rem;
@@ -126,6 +127,20 @@ function App() {
     setName(e.target.name.value);
   }
 
+  function handleDownloadButtonClick() {
+    toast('Nunca descargue archivos de páginas poco confiables.\n\n¡Podría ser un virus! 🦠',
+      {
+        position: "bottom-right",
+        duration: 6000,
+        style: {
+          borderRadius: '10px',
+          background: '#333333',
+          color: '#fff',
+        },
+      }
+    );
+  }
+
   if (name) {
     return (
       <CertificatePageBackground>
@@ -152,7 +167,7 @@ function App() {
             <SealImage src={seal} />
           </CertificateContainer>
         </Atropos>
-        <Button className='dl-btn' auto>Descargar</Button>
+        <Button onClick={handleDownloadButtonClick} className='dl-btn' auto>Descargar</Button>
       </CertificatePageBackground>
     );
   }

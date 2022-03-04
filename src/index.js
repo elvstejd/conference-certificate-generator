@@ -5,12 +5,14 @@ import App from './App';
 import 'atropos/css';
 import reportWebVitals from './reportWebVitals';
 import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { Toaster } from 'react-hot-toast';
 
 const theme = createTheme({ type: 'dark' })
 
 ReactDOM.render(
   <React.StrictMode>
     <NextUIProvider theme={theme}>
+      <Toaster />
       <App />
     </NextUIProvider>
   </React.StrictMode>,
