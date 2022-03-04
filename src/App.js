@@ -32,6 +32,7 @@ const TitlesContainer = styled.div`
 const CertificatePageBackground = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background: rgb(8,212,223);
   background: linear-gradient(149deg, rgba(8,212,223,1) 0%, rgba(58,122,226,1) 51%, rgba(244,7,254,1) 100%);
   min-height: 100vh;
@@ -39,6 +40,11 @@ const CertificatePageBackground = styled.div`
   padding-bottom: 4rem;
   * {
     margin: auto;
+  }
+
+  .dl-btn {
+    margin-top: 3rem;
+    background-color: #333333;
   }
 `;
 
@@ -115,6 +121,8 @@ function App() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
+    const name = e.target.name.value;
+    if (!name) return;
     setName(e.target.name.value);
   }
 
@@ -144,6 +152,7 @@ function App() {
             <SealImage src={seal} />
           </CertificateContainer>
         </Atropos>
+        <Button className='dl-btn' auto>Descargar</Button>
       </CertificatePageBackground>
     );
   }
@@ -158,7 +167,7 @@ function App() {
         <StyledForm
           onSubmit={handleFormSubmit}
         >
-          <Input bordered label='Tu nombre' width='100%' name="name" />
+          <Input bordered label='Por favor, escriba su nombre' helperText='*Para mejores resultados, utilice un navegador de escritorio' width='100%' name="name" />
           <Button auto>Crear certificado</Button>
         </StyledForm>
       </MainPageContainer>
