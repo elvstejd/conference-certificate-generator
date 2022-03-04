@@ -152,7 +152,7 @@ function App() {
             </BigTitle>
             <PresentedTo>PRESENTADO A</PresentedTo>
             <Name>{name}</Name>
-            <CertificateDescription>POR HABER SIDO PARTE DE LA 1RA CONFERENCIA DE PRIVACIDAD DE DATOS Y CERTIFICACIÓN DE ISACA</CertificateDescription>
+            <CertificateDescription>POR HABER SIDO PARTE DE LA 1RA CONFERENCIA DE PRIVACIDAD DE DATOS Y CERTIFICACIÓN CDPSE DE ISACA</CertificateDescription>
             <CertificateFooter>
               <div>
                 <SmallTitle>Cortesía de</SmallTitle>
