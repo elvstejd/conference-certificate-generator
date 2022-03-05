@@ -128,9 +128,8 @@ function App() {
   }
 
   function handleDownloadButtonClick() {
-    toast('Nunca descargue archivos de páginas poco confiables.\n\n¡Podría ser un virus! 🦠',
+    toast('Puedes realizar una captura de pantalla para guardar tu certificado. 📷',
       {
-        position: "bottom-right",
         duration: 6000,
         style: {
           borderRadius: '10px',
@@ -167,7 +166,7 @@ function App() {
             <SealImage src={seal} />
           </CertificateContainer>
         </Atropos>
-        <Button onClick={handleDownloadButtonClick} className='dl-btn' auto>Descargar</Button>
+        <Button onClick={handleDownloadButtonClick} className='dl-btn' auto>ℹ️</Button>
       </CertificatePageBackground>
     );
   }
